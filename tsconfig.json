@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "lib": [ "es2016", "dom", "es2017" ],
+    "paths": {
+      "@/*":["./src/*"],
+    },
+    "allowSyntheticDefaultImports": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "typings",
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

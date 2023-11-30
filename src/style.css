@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,42 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/stylistic",
+    "plugin:prettier/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "parser": "@typescript-eslint/parser"
+  },
+  "plugins": [
+    "vue",
+    "html"
+  ],
+  "ignorePatterns": ["temp/**", "extensions/**", "node_modules/**", "**/*.js"],
+  "rules": {
+    "@typescript-eslint/no-empty-function": 0,
+    "@typescript-eslint/no-unused-vars": 1,
+    "@typescript-eslint/no-explicit-any": 0,
+    "no-var": "off",
+    "prettier/prettier": [2, {
+      "printWidth": 120,
+      "usePrettierrc": false,
+      "singleQuote": true,
+      "trailingComma": "es5",
+      "semi": false
+    }],
+      "strict": 0,
+      "prefer-promise-reject-errors": 0,
+      "eqeqeq": 0,
+      "array-callback-return": 0,
+      "no-return-await": 0
+  }
+}
