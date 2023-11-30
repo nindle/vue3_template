@@ -4,6 +4,9 @@ import { resolve } from 'path'
 import { VITE_DROP_CONSOLE } from './config/constant'
 import autoprefixer from 'autoprefixer'
 import tailwindcss from 'tailwindcss'
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 export default ({ command, mode }: ConfigEnv): UserConfig => {
   const isBuild = command.includes('build')
@@ -15,7 +18,13 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
     root: process.cwd(),
     publicDir: 'public',
     base: './',
-    plugins: [vue()],
+    plugins: [vue(),
+     AutoImport({
+      resolvers: [ElementPlusResolver()],
+    }),
+    Components({
+      resolvers: [ElementPlusResolver()],
+    }),],
     css: {
       modules: {
         generateScopedName: '[name]__[local]___[hash:base64:5]',
